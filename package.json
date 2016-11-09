@@ -1,0 +1,39 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "Madeira Web Conf - Landing Page",
+  "main": "index.js",
+  "repository": {
+    "url": "http://github.com/madeirawebconf/landing-page",
+    "type": "git"
+  },
+  "author": "madeirawebconf",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-plugin-transform-object-rest-spread": "^6.16.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-register": "^6.18.0",
+    "cors": "^2.8.1",
+    "eslint": "^3.9.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^2.1.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.5.0",
+    "npm-run-all": "^3.1.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "scripts": {
+    "client": "webpack-dev-server --content-base build/ --inline --hot",
+    "server": "node src/server",
+    "start": "run-p client server"
+  }
+}
