@@ -1,0 +1,22 @@
+.a-lang {
+  display: flex;
+
+  > a {
+    color: map(primary,base);
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: map(fontSizes, lg, font-size);
+    line-height: map(fontSizes, lg, line-height);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 0.3;
+    }
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+}

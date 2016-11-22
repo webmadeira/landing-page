@@ -11,6 +11,7 @@ module.exports = {
   rules: {
     semi: [2, 'never'],
     'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }],
-    'react/require-extension': 'off'
+    'react/require-extension': 'off',
+    'import/no-dynamic-require': 'off'
   }
 }
