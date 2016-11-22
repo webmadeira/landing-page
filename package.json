@@ -7,6 +7,11 @@
     "url": "http://github.com/madeirawebconf/landing-page",
     "type": "git"
   },
+  "scripts": {
+    "server": "node src/server",
+    "start": "yarn install && gulp",
+    "postinstall": "gulp"
+  },
   "author": "madeirawebconf",
   "license": "MIT",
   "dependencies": {
@@ -46,9 +51,5 @@
     "eslint-plugin-react": "^6.5.0",
     "npm-run-all": "^3.1.1",
     "webpack": "^1.13.3"
-  },
-  "scripts": {
-    "server": "node src/server",
-    "start": "yarn install && gulp"
   }
 }
