@@ -17,7 +17,10 @@ const paths = {
   },
   outFolder: 'public',
 }
-const colorPalettes = require(`./${paths.assets}/config/color-palettes.js`)('light')
+
+const theme = 'light'
+const colorPalettes = require(`./${paths.assets}/config/color-palettes.js`)(theme)
+const colorFunction = require(`./${paths.assets}/config/color-fn.js`)(theme)
 const fontSizes = require(`./${paths.assets}/config/font-sizes.js`)
 const webpackConfig = require('./webpack.config.js')(paths)
 
@@ -26,7 +29,6 @@ const webpack = require('webpack-stream')
 const nodemon = require('gulp-nodemon')
 const sourcemaps = require('gulp-sourcemaps')
 const browserSync = require('browser-sync')
-const notify = require('gulp-notify')
 const rename = require('gulp-rename')
 const csslint = require('gulp-csslint')
 const postcss = require('gulp-postcss')
@@ -35,6 +37,11 @@ const pcNested = require('postcss-nested')
 const pcMap = require('postcss-map')({ maps: [colorPalettes, fontSizes] })
 const pcMixins = require('postcss-mixins')
 const pcAutoPrefixer = require('autoprefixer')
+const pcFunctions = require('postcss-functions')({
+  functions: {
+    getColor: colorFunction,
+  },
+})
 
 gulp.task('style', () => {
   const processors = [
@@ -43,6 +50,7 @@ gulp.task('style', () => {
     pcMap,
     pcMixins,
     pcAutoPrefixer,
+    pcFunctions,
   ]
 
   return gulp
