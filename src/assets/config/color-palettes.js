@@ -1,27 +1,15 @@
-module.exports = function(theme) {
+module.exports = function pageTheme(theme) {
   const themes = {
     light: {
       primary: {
-        base: '#f2902d',
-        light: '#ffffff',
-        dark: '#d4720d',
+        base: '#74969f',
+        light: '#e1eff2',
+        dark: '#496269',
       },
       accent: {
-        base: '#384ea9',
-        light: '#9facdf',
-        dark: '#212e64',
-      },
-      foreground: {
-        base: '#393939',
-        light: '#6e6e6e',
-        lighter: '#b2b2b2',
-        dark: '#111',
-        darker: '#000',
-      },
-      background: {
-        base: '#f8f5f5',
-        light: '#fff',
-        dark: '#ddd',
+        base: '#b04638',
+        light: '#d27b70',
+        dark: '#933a2f',
       },
     },
   }
