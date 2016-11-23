@@ -2,11 +2,11 @@
   display: flex;
 
   > a {
-    color: map(primary,base);
+    color: getColor(accent);
     display: block;
     font-family: 'Open Sans', sans-serif;
-    font-size: map(fontSizes, lg, font-size);
     line-height: map(fontSizes, lg, line-height);
+    font-size: map(fontSizes, lg, font-size);
     text-decoration: none;
     text-transform: uppercase;
     transition: all 0.3s ease;
