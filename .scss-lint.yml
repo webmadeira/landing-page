@@ -1,1 +1,5 @@
 scss_files: "**/*.pcss"
+linters:
+  Comment:
+    enabled: false
+    style: silent

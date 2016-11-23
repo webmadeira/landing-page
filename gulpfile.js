@@ -31,6 +31,7 @@ const sourcemaps = require('gulp-sourcemaps')
 const browserSync = require('browser-sync')
 const rename = require('gulp-rename')
 const csslint = require('gulp-csslint')
+const scsslint = require('gulp-scss-lint')
 const filter = require('gulp-filter')
 const postcss = require('gulp-postcss')
 const pcImport = require('postcss-import')({ root: paths.styleIndex })
@@ -50,12 +51,13 @@ gulp.task('style', () => {
     pcNested,
     pcMap,
     pcMixins,
-    pcAutoPrefixer,
+    pcAutoPrefixer('last 3 versions'),
     pcFunctions,
   ]
 
   return gulp
     .src(paths.styleIndex)
+    .pipe(scsslint())
     .pipe(sourcemaps.init())
     .pipe(postcss(processors))
     .pipe(csslint())
