@@ -4,3 +4,6 @@ node_modules
 # IDE
 launch.json
 settings.json
+
+#built
+public
