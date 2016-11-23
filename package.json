@@ -20,6 +20,7 @@
     "express": "^4.14.0",
     "gulp": "^3.9.1",
     "gulp-csslint": "^1.0.0",
+    "gulp-filter": "^4.0.0",
     "gulp-nodemon": "^2.2.1",
     "gulp-postcss": "^6.2.0",
     "gulp-rename": "^1.2.2",

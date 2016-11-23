@@ -31,6 +31,7 @@ const sourcemaps = require('gulp-sourcemaps')
 const browserSync = require('browser-sync')
 const rename = require('gulp-rename')
 const csslint = require('gulp-csslint')
+const filter = require('gulp-filter')
 const postcss = require('gulp-postcss')
 const pcImport = require('postcss-import')({ root: paths.styleIndex })
 const pcNested = require('postcss-nested')
@@ -62,14 +63,15 @@ gulp.task('style', () => {
     .pipe(rename('style.css'))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(`./${paths.outFolder}/assets/stylesheets`))
+    .pipe(filter(['**/*.css']))  
     .pipe(browserSync.stream())
-    .pipe(notify('Styles Compiled Successfully!'))
 })
 
 gulp.task('views', () =>
   gulp
     .src(`${paths.inFolder}/index.html`)
     .pipe(gulp.dest(`./${paths.outFolder}`))
+    .pipe(browserSync.stream())
 )
 
 gulp.task('bundle', () =>
@@ -77,12 +79,14 @@ gulp.task('bundle', () =>
     .src('src/entry.js')
     .pipe(webpack(webpackConfig))
     .pipe(gulp.dest(`./${paths.outFolder}/assets/js`))
+    .pipe(browserSync.stream())
 )
 
 gulp.task('server', () => {
   nodemon({
     script: 'src/server',
     env: { NODE_ENV: 'development' },
+    watch: [`${paths.inFolder}/server`],
   })
 })
 
@@ -93,8 +97,11 @@ gulp.task('watch', () => {
       baseDir: './public',
     },
   })
-  gulp.watch(`${paths.inFolder}/**/*.css`, ['default'])
-  gulp.watch(`${paths.inFolder}/**/*.html`, browserSync.reload)
+
+  gulp.watch([`${paths.assets}/**/*.css`], ['style'])
+  gulp.watch([`${paths.assets}/config/*.js`], ['bundle', 'style'])
+  gulp.watch(`${paths.assets}/**/*.js`, ['bundle'])
+  gulp.watch(`${paths.inFolder}/**/*.html`, ['views'])
 })
 
 gulp.task('default', [
