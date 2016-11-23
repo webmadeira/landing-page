@@ -7,7 +7,7 @@ const paths = {
     return `${this.assets}/style`
   },
   get styleIndex() {
-    return `${this.styleFolder}/screen.css`
+    return `${this.styleFolder}/main.pcss`
   },
   get scriptFolder() {
     return `${this.assets}/js`
@@ -40,7 +40,7 @@ const pcMixins = require('postcss-mixins')
 const pcAutoPrefixer = require('autoprefixer')
 const pcFunctions = require('postcss-functions')({
   functions: {
-    getColor: colorFunction,
+    'get-color': colorFunction,
   },
 })
 
@@ -63,7 +63,7 @@ gulp.task('style', () => {
     .pipe(rename('style.css'))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(`./${paths.outFolder}/assets/stylesheets`))
-    .pipe(filter(['**/*.css']))  
+    .pipe(filter(['**/*.css']))
     .pipe(browserSync.stream())
 })
 
@@ -98,7 +98,7 @@ gulp.task('watch', () => {
     },
   })
 
-  gulp.watch([`${paths.assets}/**/*.css`], ['style'])
+  gulp.watch([`${paths.assets}/**/*.pcss`], ['style'])
   gulp.watch([`${paths.assets}/config/*.js`], ['bundle', 'style'])
   gulp.watch(`${paths.assets}/**/*.js`, ['bundle'])
   gulp.watch(`${paths.inFolder}/**/*.html`, ['views'])

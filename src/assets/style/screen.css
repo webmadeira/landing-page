@@ -1,9 +1,0 @@
-/* Global */
-@import 'reset-css/reset.css';
-
-/* ATOMS */
-@import 'atoms/lang';
-@import 'atoms/a-headline';
-
-/* MOLECULES */
-@import 'molecules/m-lang-selector';
