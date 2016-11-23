@@ -9,7 +9,7 @@
   },
   "scripts": {
     "server": "node src/server",
-    "start": "yarn install && gulp",
+    "start": "yarn install",
     "postinstall": "gulp"
   },
   "author": "madeirawebconf",
