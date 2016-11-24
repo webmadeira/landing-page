@@ -1,1 +1,1 @@
-export const API_ROOT = 'http://localhost:8080/api'
+export const API_ROOT = '/api'

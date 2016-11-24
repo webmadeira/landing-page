@@ -5,6 +5,8 @@ import { talks } from './data/talks'
 const PORT = 8080
 const app = express()
 
+app.set('port', (process.env.PORT || 5000))
+
 app.use(cors()) // TODO: Use webpack proxy for development
 
 app.use('/', express.static(`${process.cwd()}/public`))
@@ -15,4 +17,6 @@ app.get('/', (req, res) =>
 
 app.get('/api/talks', (req, res) => res.json(talks))
 
-app.listen(PORT, () => console.log(`Server listening on port ${PORT}`))
+app.listen(app.get('port'), () => {
+  console.log(`Server listening on port ${app.get('port')}`)
+})

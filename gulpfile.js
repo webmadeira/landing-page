@@ -95,7 +95,7 @@ gulp.task('server', () => {
 gulp.task('watch', () => {
   // Static server
   browserSync.init({
-    proxy: 'localhost:8080',
+    proxy: 'localhost:5000',
   })
 
   gulp.watch([`${paths.assets}/**/*.pcss`], ['style'])
