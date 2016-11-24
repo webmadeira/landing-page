@@ -55,8 +55,8 @@ gulp.task('style', () => {
   const processors = [
     pcImport,
     pcNested,
-    pcMap,
     pcMixins,
+    pcMap,
     pcAutoPrefixer('last 3 versions'),
     pcFunctions,
   ]
