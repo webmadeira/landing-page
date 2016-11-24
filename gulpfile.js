@@ -25,6 +25,7 @@ const fontSizes = require(`./${paths.assets}/config/font-sizes.js`)
 const webpackConfig = require('./webpack.config.js')(paths)
 
 const gulp = require('gulp')
+const environments = require('gulp-environments')
 const webpack = require('webpack-stream')
 const nodemon = require('gulp-nodemon')
 const sourcemaps = require('gulp-sourcemaps')
@@ -45,6 +46,11 @@ const pcFunctions = require('postcss-functions')({
   },
 })
 
+
+// environments
+const development = environments.development
+const production = environments.production
+
 gulp.task('style', () => {
   const processors = [
     pcImport,
@@ -57,16 +63,16 @@ gulp.task('style', () => {
 
   return gulp
     .src(paths.styleIndex)
-    // .pipe(scsslint())
-    .pipe(sourcemaps.init())
+    .pipe(development(scsslint()))
+    .pipe(development(sourcemaps.init()))
     .pipe(postcss(processors))
     .pipe(csslint())
     .pipe(csslint.formatter())
     .pipe(rename('style.css'))
-    .pipe(sourcemaps.write('.'))
+    .pipe(development(sourcemaps.write('.')))
     .pipe(gulp.dest(`./${paths.outFolder}/assets/stylesheets`))
-    .pipe(filter(['**/*.css']))
-    .pipe(browserSync.stream())
+    .pipe(development(filter(['**/*.css'])))
+    .pipe(development(browserSync.stream()))
 })
 
 gulp.task('views', () =>
@@ -112,7 +118,7 @@ gulp.task('default', [
   'watch',
 ])
 
-gulp.task('production', [
+gulp.task('build', [
   'style',
   'bundle',
   'views',
