@@ -113,3 +113,9 @@ gulp.task('default', [
   'views',
   'watch',
 ])
+
+gulp.task('prod', [
+  'style',
+  'bundle',
+  'views',
+])

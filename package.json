@@ -8,15 +8,21 @@
     "type": "git"
   },
   "scripts": {
-    "server": "node src/server",
-    "start": "yarn install",
-    "postinstall": "gulp"
+    "start": "gulp",
+    "postinstall": "gulp prod"
   },
   "author": "madeirawebconf",
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "^6.5.3",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-plugin-transform-object-rest-spread": "^6.16.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-register": "^6.18.0",
     "browser-sync": "^2.18.2",
+    "cors": "^2.8.1",
     "express": "^4.14.0",
     "gulp": "^3.9.1",
     "gulp-csslint": "^1.0.0",
@@ -26,6 +32,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-scss-lint": "^0.4.0",
     "gulp-sourcemaps": "^2.2.0",
+    "npm-run-all": "^3.1.1",
     "postcss-functions": "^2.1.1",
     "postcss-import": "^8.2.0",
     "postcss-map": "^0.8.0",
@@ -36,22 +43,14 @@
     "react-dom": "^15.3.2",
     "reset-css": "^2.2.0",
     "webpack-stream": "^3.2.0",
+    "webpack": "^1.13.3",
     "yarn": "^0.17.8"
   },
   "devDependencies": {
-    "babel-core": "^6.18.2",
-    "babel-loader": "^6.2.7",
-    "babel-plugin-transform-object-rest-spread": "^6.16.0",
-    "babel-preset-latest": "^6.16.0",
-    "babel-preset-react": "^6.16.0",
-    "babel-register": "^6.18.0",
-    "cors": "^2.8.1",
     "eslint": "^3.9.1",
     "eslint-config-airbnb": "^12.0.0",
     "eslint-plugin-import": "^2.1.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
-    "eslint-plugin-react": "^6.5.0",
-    "npm-run-all": "^3.1.1",
-    "webpack": "^1.13.3"
+    "eslint-plugin-react": "^6.5.0"
   }
 }
