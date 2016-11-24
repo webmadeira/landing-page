@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "gulp",
-    "postinstall": "gulp prod"
+    "postinstall": "gulp"
   },
   "author": "madeirawebconf",
   "license": "MIT",
