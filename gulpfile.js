@@ -57,7 +57,7 @@ gulp.task('style', () => {
 
   return gulp
     .src(paths.styleIndex)
-    .pipe(scsslint())
+    // .pipe(scsslint())
     .pipe(sourcemaps.init())
     .pipe(postcss(processors))
     .pipe(csslint())
@@ -95,7 +95,7 @@ gulp.task('server', () => {
 gulp.task('watch', () => {
   // Static server
   browserSync.init({
-    proxy: 'localhost:8080',
+    proxy: 'localhost:5000',
   })
 
   gulp.watch([`${paths.assets}/**/*.pcss`], ['style'])
