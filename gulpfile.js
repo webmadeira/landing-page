@@ -114,8 +114,10 @@ gulp.task('default', [
   'watch',
 ])
 
-gulp.task('prod', [
+gulp.task('production', [
   'style',
   'bundle',
   'views',
-])
+], () => {
+  console.log('All done')
+})
