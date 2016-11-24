@@ -57,15 +57,15 @@ gulp.task('style', () => {
 
   return gulp
     .src(paths.styleIndex)
-    .pipe(scsslint())
-    .pipe(sourcemaps.init())
+    // .pipe(scsslint())
+    // .pipe(sourcemaps.init())
     .pipe(postcss(processors))
-    .pipe(csslint())
+    // .pipe(csslint())
     .pipe(csslint.formatter())
     .pipe(rename('style.css'))
-    .pipe(sourcemaps.write('.'))
+    // .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(`./${paths.outFolder}/assets/stylesheets`))
-    .pipe(filter(['**/*.css']))
+    // .pipe(filter(['**/*.css']))
     .pipe(browserSync.stream())
 })
 
