@@ -115,7 +115,7 @@ gulp.task('default', [
 ])
 
 gulp.task('production', [
-  // 'style',
+  'style',
   // 'bundle',
   'views',
 ], () => {
