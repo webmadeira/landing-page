@@ -129,6 +129,7 @@ gulp.task('build', [
   'style',
   'bundle',
   'views',
+  'images',
 ], () => {
   console.log('All done')
 })
