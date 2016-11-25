@@ -1,3 +1,8 @@
 .a-title {
-  color: get-color(accent);
+  @mixin font-sizing lg;
+  @mixin font-family primary, bold;
+
+  &.is-highlight {
+    color: get-color(accent);
+  }
 }
