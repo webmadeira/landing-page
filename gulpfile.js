@@ -22,6 +22,7 @@ const theme = 'light'
 const colorPalettes = require(`./${paths.client}/config/color-palettes.js`)(theme)
 const colorFunction = require(`./${paths.client}/config/color-fn.js`)(theme)
 const fontSettings = require(`./${paths.client}/config/font-settings.js`)
+const screenSizes = require(`./${paths.client}/config/screen-sizes.js`)
 const webpackConfig = require('./webpack.config.js')(paths)
 
 const gulp = require('gulp')
@@ -37,9 +38,10 @@ const filter = require('gulp-filter')
 const postcss = require('gulp-postcss')
 const pcImport = require('postcss-import')({ root: paths.styleIndex })
 const pcNested = require('postcss-nested')
-const pcMap = require('postcss-map')({ maps: [colorPalettes, fontSettings] })
+const pcMap = require('postcss-map')({ maps: [colorPalettes, fontSettings, screenSizes] })
 const pcMixins = require('postcss-mixins')
 const pcAutoPrefixer = require('autoprefixer')
+const pcConditionals = require('postcss-conditionals')
 const pcFunctions = require('postcss-functions')({
   functions: {
     'get-color': colorFunction,
@@ -56,6 +58,7 @@ gulp.task('style', () => {
     pcImport,
     pcNested,
     pcMixins,
+    pcConditionals,
     pcMap,
     pcAutoPrefixer('last 3 versions'),
     pcFunctions,
