@@ -1,16 +1,16 @@
 const paths = {
   inFolder: './src',
-  get assets() {
-    return `${this.inFolder}/assets`
+  get client() {
+    return `${this.inFolder}/client`
   },
   get styleFolder() {
-    return `${this.assets}/style`
+    return `${this.client}/style`
   },
   get styleIndex() {
     return `${this.styleFolder}/main.pcss`
   },
   get scriptFolder() {
-    return `${this.assets}/js`
+    return `${this.client}/js`
   },
   get scriptIndex() {
     return `${this.scriptFolder}/index.js`
@@ -19,9 +19,9 @@ const paths = {
 }
 
 const theme = 'light'
-const colorPalettes = require(`./${paths.assets}/config/color-palettes.js`)(theme)
-const colorFunction = require(`./${paths.assets}/config/color-fn.js`)(theme)
-const fontSettings = require(`./${paths.assets}/config/font-settings.js`)
+const colorPalettes = require(`./${paths.client}/config/color-palettes.js`)(theme)
+const colorFunction = require(`./${paths.client}/config/color-fn.js`)(theme)
+const fontSettings = require(`./${paths.client}/config/font-settings.js`)
 const webpackConfig = require('./webpack.config.js')(paths)
 
 const gulp = require('gulp')
@@ -82,6 +82,12 @@ gulp.task('views', () =>
     .pipe(browserSync.stream())
 )
 
+gulp.task('images', () =>
+  gulp
+    .src(`${paths.client}/img/*`)
+    .pipe(gulp.dest(`./${paths.outFolder}/img/`))
+)
+
 gulp.task('bundle', () =>
   gulp
     .src('src/entry.js')
@@ -104,9 +110,9 @@ gulp.task('watch', () => {
     proxy: 'localhost:5000',
   })
 
-  gulp.watch([`${paths.assets}/**/*.pcss`], ['style'])
-  gulp.watch([`${paths.assets}/config/*.js`], ['bundle', 'style'])
-  gulp.watch(`${paths.assets}/**/*.js`, ['bundle'])
+  gulp.watch([`${paths.client}/**/*.pcss`], ['style'])
+  gulp.watch([`${paths.client}/config/*.js`], ['bundle', 'style'])
+  gulp.watch(`${paths.client}/**/*.js`, ['bundle'])
   gulp.watch(`${paths.inFolder}/**/*.html`, ['views'])
 })
 
@@ -115,6 +121,7 @@ gulp.task('default', [
   'style',
   'bundle',
   'views',
+  'images',
   'watch',
 ])
 
