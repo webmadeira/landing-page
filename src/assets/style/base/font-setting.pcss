@@ -1,4 +1,9 @@
-@define-mixin font-setting $size: normal {
+@define-mixin font-sizing $size: normal {
   font-size: map(fontSizes, $size, font-size);
   line-height: map(fontSizes, $size, line-height);
+}
+
+@define-mixin font-family $family: primary, $weight: regular {
+  font-family: map(fontFamilies, $family, name);
+  font-weight: map(fontFamilies, $family, fontWeights, $weight);
 }

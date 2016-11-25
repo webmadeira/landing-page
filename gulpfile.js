@@ -21,7 +21,7 @@ const paths = {
 const theme = 'light'
 const colorPalettes = require(`./${paths.assets}/config/color-palettes.js`)(theme)
 const colorFunction = require(`./${paths.assets}/config/color-fn.js`)(theme)
-const fontSizes = require(`./${paths.assets}/config/font-sizes.js`)
+const fontSettings = require(`./${paths.assets}/config/font-settings.js`)
 const webpackConfig = require('./webpack.config.js')(paths)
 
 const gulp = require('gulp')
@@ -37,7 +37,7 @@ const filter = require('gulp-filter')
 const postcss = require('gulp-postcss')
 const pcImport = require('postcss-import')({ root: paths.styleIndex })
 const pcNested = require('postcss-nested')
-const pcMap = require('postcss-map')({ maps: [colorPalettes, fontSizes] })
+const pcMap = require('postcss-map')({ maps: [colorPalettes, fontSettings] })
 const pcMixins = require('postcss-mixins')
 const pcAutoPrefixer = require('autoprefixer')
 const pcFunctions = require('postcss-functions')({
