@@ -1,5 +1,6 @@
 {
   "unique-headings": false,
   "overqualified-elements": false,
-  "order-alphabetical": false
+  "order-alphabetical": false,
+  "adjoining-classes": false
 }
