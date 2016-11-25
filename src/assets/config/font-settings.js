@@ -12,11 +12,11 @@ const fontSizes = {
   },
   lg: {
     'font-size': '1.33rem',
-    'line-height': `${baseLineHeight * 2}rem`,
+    'line-height': `${baseLineHeight * 1.5}rem`,
   },
   xl: {
     'font-size': '1.777rem',
-    'line-height': `${baseLineHeight * 2}rem`,
+    'line-height': `${baseLineHeight * 1.5}rem`,
   },
 }
 
