@@ -29,6 +29,7 @@
     "express": "^4.14.0",
     "gulp": "^3.9.1",
     "gulp-csslint": "^1.0.0",
+    "gulp-cssnano": "^2.1.2",
     "gulp-environments": "^0.1.1",
     "gulp-filter": "^4.0.0",
     "gulp-nodemon": "^2.2.1",
