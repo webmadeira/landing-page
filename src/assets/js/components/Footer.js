@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
+import translate from './translate'
 
-const Footer = () => (
+// TODO: Map each language
+const Footer = props => (
   <footer>
-    <a href="#en">EN</a>
-    <a href="#pt">PT</a>
+    <a href="#en" onClick={() => props.onLanguageChange('en')}>{props.strings.en}</a>
+    <a href="#pt" onClick={() => props.onLanguageChange('pt')}>{props.strings.pt}</a>
   </footer>
 )
 
-export default Footer
+Footer.propTypes = {
+  strings: PropTypes.objectOf(PropTypes.string),
+  onLanguageChange: PropTypes.func,
+}
+
+export default translate('Footer')(Footer)

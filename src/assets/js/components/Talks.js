@@ -1,24 +1,23 @@
 import React, { PropTypes } from 'react'
+import translate from './translate'
 
-const renderTalks = (talks) => {
-  if (!talks) return <div>Loading...</div>
-
-  return talks.map(({ theme, speaker }) => (
+const renderTalks = talks => (
+  talks.map(({ theme, speaker }) => (
     <div key={theme}>
       <div>{theme}</div>
       <div>{speaker}</div>
     </div>
   ))
-}
+)
 
 const Talks = props => (
   <main>
-    {renderTalks(props.talks)}
+    {renderTalks(props.strings)}
   </main>
 )
 
 Talks.propTypes = {
-  talks: PropTypes.arrayOf(PropTypes.object).isRequired,
+  strings: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)), // TODO: Use the same structure
 }
 
-export default Talks
+export default translate('Talks')(Talks)
