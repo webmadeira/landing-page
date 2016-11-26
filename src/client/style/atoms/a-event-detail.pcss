@@ -1,0 +1,19 @@
+.a-event-detail {
+  @mixin font-sizing lg;
+  @mixin font-family primary, bold;
+  color: white;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+
+  &.is-long-text{
+    top: 15px;
+  }
+
+  &.is-small-text{
+    top: 2px;
+  }
+}
