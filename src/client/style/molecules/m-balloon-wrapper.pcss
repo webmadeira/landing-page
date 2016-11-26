@@ -1,9 +1,55 @@
 .m-balloon-wrapper {
   width: 100%;
+  overflow: auto;
 
   > img {
     &.is-mirrored {
       transform: scale(-1, 1);
+    }
+  }
+
+  .a-event-detail {
+    left: 50%;
+    position: absolute;
+
+    &.is-long-text{
+      top: 15px;
+    }
+
+    &.is-small-text{
+      top: 2px;
+    }
+  }
+}
+
+@mixin screen-size xs {
+  .m-balloon-wrapper {
+    display: block;
+    width: 100%;
+    left: 0;
+
+    &:fist-of-type {
+      margin-bottom: 5px;
+    }
+
+    &:nth-of-type(2) {
+      margin-bottom: 25px;
+    }
+
+    .a-event-detail {
+      @mixin font-sizing normal;
+      @mixin font-family primary, regular;
+      color: get-color();
+      position: static;
+      width: 100%;
+      text-align: center;
+      left: initial;
+      transform: none;
+
+      &.is-long-text,
+      &.is-small-text {
+        top: initial;
+      }
     }
   }
 }
