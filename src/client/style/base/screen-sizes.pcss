@@ -1,14 +1,14 @@
 
 /**
- ##### Media queries for different screen sizes ##### 
-  
+ ##### Media queries for different screen sizes #####
+
   ------------ Usage example ------------
   @mixin screen-size xs {
     .sample {
       color: red;
     };
   };
-  
+
   @mixin screen-size sm {
     .sample {
       color: green;
@@ -54,6 +54,5 @@
     @media only screen and (min-width: map(screenSizes, xl, min)px) {
       @mixin-content;
     }
-  } 
+  }
 }
-
