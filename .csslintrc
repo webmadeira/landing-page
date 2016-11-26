@@ -2,5 +2,7 @@
   "unique-headings": false,
   "overqualified-elements": false,
   "order-alphabetical": false,
-  "adjoining-classes": false
+  "adjoining-classes": false,
+  "universal-selector": false,
+  "box-sizing": false
 }
