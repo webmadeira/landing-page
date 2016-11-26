@@ -4,5 +4,6 @@
   "order-alphabetical": false,
   "adjoining-classes": false,
   "universal-selector": false,
-  "box-sizing": false
+  "box-sizing": false,
+  "box-model": false
 }
