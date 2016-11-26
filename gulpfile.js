@@ -1,16 +1,16 @@
 const paths = {
   inFolder: './src',
-  get assets() {
-    return `${this.inFolder}/assets`
+  get client() {
+    return `${this.inFolder}/client`
   },
   get styleFolder() {
-    return `${this.assets}/style`
+    return `${this.client}/style`
   },
   get styleIndex() {
     return `${this.styleFolder}/main.pcss`
   },
   get scriptFolder() {
-    return `${this.assets}/js`
+    return `${this.client}/js`
   },
   get scriptIndex() {
     return `${this.scriptFolder}/index.js`
@@ -19,12 +19,14 @@ const paths = {
 }
 
 const theme = 'light'
-const colorPalettes = require(`./${paths.assets}/config/color-palettes.js`)(theme)
-const colorFunction = require(`./${paths.assets}/config/color-fn.js`)(theme)
-const fontSizes = require(`./${paths.assets}/config/font-sizes.js`)
+const colorPalettes = require(`./${paths.client}/config/color-palettes.js`)(theme)
+const colorFunction = require(`./${paths.client}/config/color-fn.js`)(theme)
+const fontSettings = require(`./${paths.client}/config/font-settings.js`)
+const screenSizes = require(`./${paths.client}/config/screen-sizes.js`)
 const webpackConfig = require('./webpack.config.js')(paths)
 
 const gulp = require('gulp')
+const environments = require('gulp-environments')
 const webpack = require('webpack-stream')
 const nodemon = require('gulp-nodemon')
 const sourcemaps = require('gulp-sourcemaps')
@@ -36,37 +38,44 @@ const filter = require('gulp-filter')
 const postcss = require('gulp-postcss')
 const pcImport = require('postcss-import')({ root: paths.styleIndex })
 const pcNested = require('postcss-nested')
-const pcMap = require('postcss-map')({ maps: [colorPalettes, fontSizes] })
+const pcMap = require('postcss-map')({ maps: [colorPalettes, fontSettings, screenSizes] })
 const pcMixins = require('postcss-mixins')
 const pcAutoPrefixer = require('autoprefixer')
+const pcConditionals = require('postcss-conditionals')
 const pcFunctions = require('postcss-functions')({
   functions: {
     'get-color': colorFunction,
   },
 })
 
+
+// environments
+const development = environments.development
+const production = environments.production
+
 gulp.task('style', () => {
   const processors = [
     pcImport,
     pcNested,
-    pcMap,
     pcMixins,
+    pcConditionals,
+    pcMap,
     pcAutoPrefixer('last 3 versions'),
     pcFunctions,
   ]
 
   return gulp
     .src(paths.styleIndex)
-    .pipe(scsslint())
-    .pipe(sourcemaps.init())
+    .pipe(development(scsslint()))
+    .pipe(development(sourcemaps.init()))
     .pipe(postcss(processors))
     .pipe(csslint())
     .pipe(csslint.formatter())
     .pipe(rename('style.css'))
-    .pipe(sourcemaps.write('.'))
+    .pipe(development(sourcemaps.write('.')))
     .pipe(gulp.dest(`./${paths.outFolder}/assets/stylesheets`))
-    .pipe(filter(['**/*.css']))
-    .pipe(browserSync.stream())
+    .pipe(development(filter(['**/*.css'])))
+    .pipe(development(browserSync.stream()))
 })
 
 gulp.task('views', () =>
@@ -74,6 +83,12 @@ gulp.task('views', () =>
     .src(`${paths.inFolder}/index.html`)
     .pipe(gulp.dest(`./${paths.outFolder}`))
     .pipe(browserSync.stream())
+)
+
+gulp.task('images', () =>
+  gulp
+    .src(`${paths.client}/img/*`)
+    .pipe(gulp.dest(`./${paths.outFolder}/img/`))
 )
 
 gulp.task('bundle', () =>
@@ -95,14 +110,12 @@ gulp.task('server', () => {
 gulp.task('watch', () => {
   // Static server
   browserSync.init({
-    server: {
-      baseDir: './public',
-    },
+    proxy: 'localhost:5000',
   })
 
-  gulp.watch([`${paths.assets}/**/*.pcss`], ['style'])
-  gulp.watch([`${paths.assets}/config/*.js`], ['bundle', 'style'])
-  gulp.watch(`${paths.assets}/**/*.js`, ['bundle'])
+  gulp.watch([`${paths.client}/**/*.pcss`], ['style'])
+  gulp.watch([`${paths.client}/config/*.js`], ['bundle', 'style'])
+  gulp.watch(`${paths.client}/**/*.js`, ['bundle'])
   gulp.watch(`${paths.inFolder}/**/*.html`, ['views'])
 })
 
@@ -111,5 +124,15 @@ gulp.task('default', [
   'style',
   'bundle',
   'views',
+  'images',
   'watch',
 ])
+
+gulp.task('build', [
+  'style',
+  'bundle',
+  'views',
+  'images',
+], () => {
+  console.log('All done')
+})
