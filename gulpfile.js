@@ -34,6 +34,7 @@ const browserSync = require('browser-sync')
 const rename = require('gulp-rename')
 const csslint = require('gulp-csslint')
 const scsslint = require('gulp-scss-lint')
+const cssnano = require('gulp-cssnano')
 const filter = require('gulp-filter')
 const postcss = require('gulp-postcss')
 const pcImport = require('postcss-import')({ root: paths.styleIndex })
@@ -60,7 +61,7 @@ gulp.task('style', () => {
     pcMixins,
     pcConditionals,
     pcMap,
-    pcAutoPrefixer('last 3 versions'),
+    pcAutoPrefixer('last 5 versions'),
     pcFunctions,
   ]
 
@@ -71,6 +72,7 @@ gulp.task('style', () => {
     .pipe(postcss(processors))
     .pipe(csslint())
     .pipe(csslint.formatter())
+    .pipe(production(cssnano()))
     .pipe(rename('style.css'))
     .pipe(development(sourcemaps.write('.')))
     .pipe(gulp.dest(`./${paths.outFolder}/assets/stylesheets`))
