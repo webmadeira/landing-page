@@ -18,7 +18,7 @@ const paths = {
   outFolder: 'public',
 }
 
-const theme = 'light'
+const theme = 'two'
 const colorPalettes = require(`./${paths.client}/config/color-palettes.js`)(theme)
 const colorFunction = require(`./${paths.client}/config/color-fn.js`)(theme)
 const fontSettings = require(`./${paths.client}/config/font-settings.js`)
