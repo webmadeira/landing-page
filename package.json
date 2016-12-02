@@ -1,20 +1,20 @@
 {
   "name": "landing-page",
   "version": "1.0.0",
-  "description": "Madeira Web Conf - Landing Page",
+  "description": "Web Madeira - Landing Page",
   "main": "src/server/index.js",
   "engines": {
     "node": "6.3.1"
   },
   "repository": {
-    "url": "http://github.com/madeirawebconf/landing-page",
+    "url": "http://github.com/webmadeira/landing-page",
     "type": "git"
   },
   "scripts": {
-    "start": "node src/server",
+    "start": "gulp",
     "postinstall": "gulp build --env production"
   },
-  "author": "madeirawebconf",
+  "author": "webmadeira",
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "^6.5.3",
