@@ -63,7 +63,7 @@ gulp.task('style', () => {
 
   return gulp
     .src(paths.styleIndex)
-    .pipe(development(scsslint()))
+    // .pipe(development(scsslint()))
     .pipe(development(sourcemaps.init()))
     .pipe(postcss(processors))
     .pipe(csslint())
