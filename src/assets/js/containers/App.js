@@ -1,10 +1,9 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { changeLanguage } from '../actions/language'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import Menu from '../components/Menu'
-import Talks from '../components/Talks'
+import Header from '../components/Header/Main'
+import Topics from '../components/Topics/List'
+import Sponsors from '../components/Footer/Sponsors'
 
 class App extends Component {
   getChildContext() {
@@ -16,10 +15,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header />
-        <Menu />
-        <Talks />
-        <Footer onLanguageChange={this.props.changeLanguage} />
+        <Header onLanguageChange={this.props.changeLanguage} />
+        <Topics />
+        <Sponsors />
       </div>
     )
   }
