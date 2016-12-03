@@ -18,7 +18,7 @@ const paths = {
   outFolder: 'public',
 }
 
-const theme = 'two'
+const theme = 'one'
 const colorPalettes = require(`./${paths.client}/config/color-palettes.js`)(theme)
 const colorFunction = require(`./${paths.client}/config/color-fn.js`)(theme)
 const fontSettings = require(`./${paths.client}/config/font-settings.js`)
@@ -33,7 +33,6 @@ const sourcemaps = require('gulp-sourcemaps')
 const browserSync = require('browser-sync')
 const rename = require('gulp-rename')
 const csslint = require('gulp-csslint')
-const scsslint = require('gulp-scss-lint')
 const cssnano = require('gulp-cssnano')
 const filter = require('gulp-filter')
 const postcss = require('gulp-postcss')
@@ -67,7 +66,6 @@ gulp.task('style', () => {
 
   return gulp
     .src(paths.styleIndex)
-    // .pipe(development(scsslint()))
     .pipe(development(sourcemaps.init()))
     .pipe(postcss(processors))
     .pipe(csslint())
