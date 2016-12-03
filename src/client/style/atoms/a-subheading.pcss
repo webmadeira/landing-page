@@ -1,0 +1,8 @@
+.a-subheading {
+  @mixin font-family primary, semibold;
+  color: get-color(text, primary);
+  
+  &.is-highlight {
+    color: get-color(text, secondary);
+  }
+}

@@ -1,0 +1,11 @@
+.a-body-2 {
+  @mixin font-family primary, bold;
+
+  &.is-highlight {
+    color: get-color(text, primary);
+  }
+
+  &.is-cap {
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,58 @@
+
+/**
+ ##### Media queries for different screen sizes #####
+
+  ------------ Usage example ------------
+  @mixin screen-size xs {
+    .sample {
+      color: red;
+    };
+  };
+
+  @mixin screen-size sm {
+    .sample {
+      color: green;
+    }
+  };
+
+  @mixin screen-size gt-sm {
+    .sample {
+      color: orange;
+    }
+  }
+*/
+@define-mixin screen-size $media {
+  @if $media == 'xs' { /* Extra small Devices, Phones */
+    @media only screen and (max-width: map(screenSizes, xs, max)px) {
+      @mixin-content;
+    }
+  } @else if $media == 'gt-xs' { /* Small Devices, Tablets */
+    @media only screen and (min-width: map(screenSizes, sm, min)px) {
+      @mixin-content;
+    }
+  } @else if $media == 'sm' { /* Small Devices, Tablets */
+    @media only screen and (min-width: map(screenSizes, sm, min)px) and (max-width: map(screenSizes, sm, max)px) {
+      @mixin-content;
+    }
+  } @else if $media == 'gt-sm' { /* Small Devices, Tablets */
+    @media only screen and (min-width: map(screenSizes, md, min)px) {
+      @mixin-content;
+    }
+  } @else if $media == 'md' { /* Medium Devices, Desktops */
+    @media only screen and (min-width: map(screenSizes, md, min)px) and (max-width: map(screenSizes, md, max)px) {
+      @mixin-content;
+    }
+  } @else if $media == 'gt-md' { /* Medium Devices, Desktops */
+    @media only screen and (min-width: map(screenSizes, lg, min)px) {
+      @mixin-content;
+    }
+  } @else if $media == 'lg' { /* Large Devices, professional desktops */
+    @media only screen and (min-width: map(screenSizes, lg, min)px) and (max-width: map(screenSizes, lg, max)px) {
+      @mixin-content;
+    }
+  } @else if $media == 'gt-lg' { /* Extra large Devices, professional desktops */
+    @media only screen and (min-width: map(screenSizes, xl, min)px) {
+      @mixin-content;
+    }
+  }
+}

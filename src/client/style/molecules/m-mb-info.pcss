@@ -1,0 +1,41 @@
+.m-mb-info {
+  padding-top: 70px;
+  position: relative;
+
+  .m-balloon-wrapper {
+    position: absolute;
+
+    &:first-of-type {
+      left: calc(50% + 30px);
+      max-width: 90px;
+      top: -20px;
+    }
+
+    &:nth-of-type(2) {
+      left: calc(50% + 130px);
+      max-width: 76px;
+      top: 25px;
+    }
+  }
+}
+
+@mixin screen-size xs {
+  .m-mb-info {
+    padding-top: 0;
+
+    .m-balloon-wrapper {
+      position: static;
+
+      &:first-of-type,
+      &:nth-of-type(2) {
+        width: 100%;
+        max-width: none;
+        left: initial;
+      }
+
+      > img{
+        display: none;
+      }
+    }
+  }
+};

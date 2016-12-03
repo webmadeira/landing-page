@@ -1,0 +1,23 @@
+.m-header-centered-box {
+  margin: 0 auto 90px;
+  max-width: 450px;
+  padding: 0 10px;
+  text-align: center;
+  width: 100%;
+
+  .a-headline {
+    margin-bottom: 15px;
+  }
+
+  .a-subheading {
+    &:first-of-type {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@mixin screen-size xs {
+  .m-header-centered-box {
+    margin-bottom: 20px;
+  }
+}
