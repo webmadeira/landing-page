@@ -8,7 +8,7 @@ const Body = (props) => {
     <section className="o-event-topic-body">
       <div className="m-topic-description">
         <p className="a-body-1 is-highlight">{description}</p>
-        <Speaker speakers={speakers} />
+        <Speaker className="m-topic-speakers" speakers={speakers} />
       </div>
     </section>
   )
