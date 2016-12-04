@@ -23,10 +23,14 @@ const renderSpeakers = speakers => (
   }
 ))
 
-const Event = props => (
-  <article className="m-topic-speakers">
-    {renderSpeakers(props.speakers)}
-  </article>
-)
+const Event = props => {
+  const styleClass = props.speakers.length > 1 ? 'm-topic-speakers' : ''
+
+  return (
+    <article className={styleClass}>
+      {renderSpeakers(props.speakers)}
+    </article>
+  )
+}
 
 export default Event
