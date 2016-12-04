@@ -7,7 +7,7 @@ const Info = (props) => {
   const { date, talks } = props.strings
 
   return (
-    <div>
+    <div className="m-mb-info">
       <Ballon text={date} />
       <Ballon text={talks} />
       <Montain />
