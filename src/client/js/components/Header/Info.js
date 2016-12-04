@@ -8,8 +8,8 @@ const Info = (props) => {
 
   return (
     <div className="m-mb-info">
-      <Ballon text={date} />
-      <Ballon text={talks} />
+      <Ballon text={date} class="is-long-text" />
+      <Ballon text={talks} class="is-small-text" />
       <Montain />
     </div>
   )
