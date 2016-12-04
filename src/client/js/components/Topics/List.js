@@ -15,8 +15,10 @@ const renderTopics = topics => (
 )
 
 const Topics = props => (
-  <main>
-    {renderTopics(props.strings)}
+  <main className="o-body">
+    <div className="o-topics-list o-container">
+      {renderTopics(props.strings)}
+    </div>
   </main>
 )
 
