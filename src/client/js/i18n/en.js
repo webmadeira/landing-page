@@ -6,7 +6,7 @@ export default {
   Headline: {
     title: 'Web development talks in Madeira',
     description: 'A 4-hours not-for-profit by-the-community and for-the-community conference about web development',
-    location: 'Meetings House Auditorium - Water Ridge',
+    location: 'Meetings House Auditorium - Serra de Água',
   },
   Info: {
     date: '27 Dez 19h',
