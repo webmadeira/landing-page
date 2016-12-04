@@ -61,7 +61,6 @@ export default {
         author: 'Cristian Gonçalves',
         position: 'Senior Web Developer',
         company: 'Exictos',
-        github: 'Exictos',
       }],
     },
     {
