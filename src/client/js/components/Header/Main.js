@@ -1,12 +1,14 @@
 import React, { PropTypes } from 'react'
 import translate from '../translate'
 import Language from './Language'
+import AtomicHighlight from './AtomicHighlight'
 import CenteredBox from './CenteredBox'
 import Info from './Info'
 
 const Header = props => (
   <header className="o-header">
     <Language onLanguageChange={props.onLanguageChange} />
+    <AtomicHighlight />
     <img src="/img/logo.png" className="a-brand-logo" alt="logo" />
     <CenteredBox />
     <Info />
