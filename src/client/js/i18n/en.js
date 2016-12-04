@@ -21,6 +21,7 @@ export default {
         author: 'Miguel Quintal',
         position: 'Senior Front End Developer',
         company: 'William Hill',
+        github: 'https://github.com/mquintal',
       }],
     },
     {
@@ -32,11 +33,13 @@ export default {
           author: 'Rodolfo Gonçalves',
           position: 'Front End Developer',
           company: 'Exictos',
+          github: 'https://github.com/OrencioRodolfo',
         },
         {
           author: 'Rúben Freitas',
           position: 'Front End Developer',
           company: 'EAE',
+          github: 'https://github.com/reabreu',
         },
       ],
     },
@@ -58,6 +61,7 @@ export default {
         author: 'Cristian Gonçalves',
         position: 'Senior Web Developer',
         company: 'Exictos',
+        github: 'Exictos',
       }],
     },
     {
@@ -68,6 +72,7 @@ export default {
         author: 'Diogo Santos',
         position: 'Front End Developer',
         company: 'Exictos',
+        github: 'https://github.com/daspinola',
       }],
     },
     {
@@ -78,6 +83,7 @@ export default {
         author: 'Diogo Cardoso',
         position: 'Senior Front End Developer',
         company: 'Exictos',
+        github: 'https://github.com/dpcardoso',
       }],
     },
     {
@@ -88,6 +94,7 @@ export default {
         author: 'Aurélio Pita',
         position: 'Front End Developer',
         company: 'Blip',
+        github: 'https://github.com/jaapaurelio',
       }],
     },
     {
@@ -98,6 +105,7 @@ export default {
         author: 'Vítor Camacho',
         position: 'Front End Developer',
         company: 'Exictos',
+        github: 'https://github.com/vitorcamachoo',
       }],
     },
   ],
