@@ -24,7 +24,7 @@ export default {
       }],
     },
     {
-      image: 'atomicdesign.png',
+      image: 'atomicdesign.svg',
       theme: 'Atomic PostCSS',
       description: 'Juntando o melhor do Design Atómico e PostCSS. Vamos dar uma visão geral de como criar e manter sistemas de design, permitindo que você desenvolva UIs de alta qualidade e consistentes mais rápido do que nunca.',
       speakers: [

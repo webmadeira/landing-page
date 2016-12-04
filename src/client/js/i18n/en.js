@@ -24,7 +24,7 @@ export default {
       }],
     },
     {
-      image: 'atomicdesign.png',
+      image: 'atomicdesign.svg',
       theme: 'Atomic PostCSS',
       description: 'Joining the best from Atomic Design and PostCSS. Let’s take a overview of how to create and maintain design systems, allowing you to roll out higher quality, more consistent UIs faster than ever before.',
       speakers: [
