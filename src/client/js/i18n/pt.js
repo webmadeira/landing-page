@@ -10,7 +10,7 @@ export default {
   },
   Info: {
     date: '27 Dez 19h',
-    talks: '8 temas',
+    talks: '7 temas',
   },
   Topics: [  // TODO: Use the same structure for all translations and extract the fields that aren't multilanguage (eg: image)
     {
@@ -44,19 +44,9 @@ export default {
       ],
     },
     {
-      image: 'webdesign.png',
-      theme: 'Design a pensar no desenvolvimento',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      speakers: [{
-        author: 'João Camacho',
-        position: 'Senior Web Designer',
-        company: 'Exictos',
-      }],
-    },
-    {
       image: 'elasticsearch.png',
-      theme: 'Elasticsearch',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      theme: 'Elastic Stack',
+      description: 'Elastic Stack (antigo ELK) é um grupo de produtos open source da Elastic Team, projetado para ajudar os utilizadores a extrair dados de qualquer origem em qualquer formato e pesquisar, analisar e visualizar de forma sofisticada os dados em tempo real. Elastic Stack começa no Filebeat e termina no Kibana. O que está a meio? Você vai descobri-lo no próximo dia 27 de dezembro.',
       speakers: [{
         author: 'Cristian Gonçalves',
         position: 'Senior Web Developer',
@@ -77,7 +67,7 @@ export default {
     {
       image: 'react.png',
       theme: 'React + Redux',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      description: 'Vamos fazer uma viagem em React e Redux, uma biblioteca declarativa e baseada em componentes para a construção de interfaces e um repositório de estado previsível para aplicações JavaScript. Ao longo do caminho vamos aprender o melhor que estas ferramentas têm para oferecer e conhecer o resto do ecossistema. Alerta de spoiler - teremos carregamentos parciais e viagens no tempo!',
       speakers: [{
         author: 'Diogo Cardoso',
         position: 'Senior Front End Developer',
@@ -99,7 +89,7 @@ export default {
     {
       image: 'webpack.png',
       theme: 'Webpack',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      description: 'Estás cansado de perder tempo a gerir os recursos das tuas aplicações? Webpack está aqui para o resgate!',
       speakers: [{
         author: 'Vítor Camacho',
         position: 'Front End Developer',

@@ -10,7 +10,7 @@ export default {
   },
   Info: {
     date: '27 Dez 19h',
-    talks: '8 talks',
+    talks: '7 talks',
   },
   Topics: [  // TODO: Use the same structure for all translations and extract the fields that aren't multilanguage (eg: image)
     {
@@ -27,7 +27,7 @@ export default {
     {
       image: 'atomicdesign.svg',
       theme: 'Atomic PostCSS',
-      description: 'Joining the best from Atomic Design and PostCSS. Let’s take a overview of how to create and maintain design systems, allowing you to roll out higher quality, more consistent UIs faster than ever before.',
+      description: 'Joining the best from Atomic Design and PostCSS. Let’s take an overview of how to create and maintain design systems, allowing you to roll out higher quality, more consistent UIs faster than ever before.',
       speakers: [
         {
           author: 'Rodolfo Gonçalves',
@@ -44,19 +44,9 @@ export default {
       ],
     },
     {
-      image: 'webdesign.png',
-      theme: 'Designing with developer in mind',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      speakers: [{
-        author: 'João Camacho',
-        position: 'Senior Web Designer',
-        company: 'Exictos',
-      }],
-    },
-    {
       image: 'elasticsearch.png',
-      theme: 'Elasticsearch',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      theme: 'Elastic Stack',
+      description: 'Elastic Stack (former ELK) is a group of open source products from Elastic Team, designed to help users take data from any type of source in any format and search, analyze, and visualize in a fancy way that data in real time. Elastic Stack starts with Filebeat and ends on Kibana. What is on between? You\'ll find it next December 27th.',
       speakers: [{
         author: 'Cristian Gonçalves',
         position: 'Senior Web Developer',
@@ -77,7 +67,7 @@ export default {
     {
       image: 'react.png',
       theme: 'React + Redux',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      description: 'Let\'s take a journey into React and Redux, a declarative and component-based library for building user interfaces and a predictable state container for JavaScript apps. Along the way we\'ll learn what\'s so great about these tools and meet the rest of the ecosystem. Spoiler alert - we\'ll have hot reloading and time travel!',
       speakers: [{
         author: 'Diogo Cardoso',
         position: 'Senior Front End Developer',
@@ -99,7 +89,7 @@ export default {
     {
       image: 'webpack.png',
       theme: 'Webpack',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      description: 'Are you tired of losing time managing your applications assets? Webpack is here for the rescue!',
       speakers: [{
         author: 'Vítor Camacho',
         position: 'Front End Developer',
