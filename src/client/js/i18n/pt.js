@@ -16,7 +16,7 @@ export default {
     {
       image: 'angular.png',
       theme: 'Angular Universal',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      description: 'Vamos ver como é simples construir uma aplicação isomórfica usando o Angular Universal e como pode melhorar o desempenho da aplicação.',
       speakers: [{
         author: 'Miguel Quintal',
         position: 'Senior Front End Developer',
@@ -67,7 +67,7 @@ export default {
     {
       image: 'react.png',
       theme: 'React + Redux',
-      description: 'Vamos fazer uma viagem em React e Redux, uma biblioteca declarativa e baseada em componentes para a construção de interfaces e um repositório de estado previsível para aplicações JavaScript. Ao longo do caminho vamos aprender o melhor que estas ferramentas têm para oferecer e conhecer o resto do ecossistema. Alerta de spoiler - teremos carregamentos parciais e viagens no tempo!',
+      description: 'Vamos fazer uma viagem em React e Redux, uma biblioteca declarativa e baseada em componentes para a construção de interfaces e um repositório de estado previsível para aplicações JavaScript. Ao longo do caminho vamos aprender o melhor que estas ferramentas têm para oferecer e conhecer o resto do ecossistema.',
       speakers: [{
         author: 'Diogo Cardoso',
         position: 'Senior Front End Developer',
