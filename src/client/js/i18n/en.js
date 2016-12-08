@@ -19,7 +19,7 @@ export default {
       description: 'Let\'s see how simple is to build an isomorphic application using Angular Universal and how can you boost your application performance.',
       speakers: [{
         author: 'Miguel Quintal',
-        position: 'Senior Front End Developer',
+        position: 'Front End Developer',
         company: 'William Hill',
         github: 'https://github.com/mquintal',
       }],
@@ -49,7 +49,7 @@ export default {
       description: 'Elastic Stack (former ELK) is a group of open source products from Elastic Team, designed to help users take data from any type of source in any format and search, analyze, and visualize in a fancy way that data in real time. Elastic Stack starts with Filebeat and ends on Kibana. What is on between? You\'ll find it next December 27th.',
       speakers: [{
         author: 'Cristian Gonçalves',
-        position: 'Senior Web Developer',
+        position: 'Web Developer',
         company: 'Exictos',
       }],
     },
@@ -70,7 +70,7 @@ export default {
       description: 'Let\'s take a journey into React and Redux, a declarative and component-based library for building user interfaces and a predictable state container for JavaScript apps. Along the way we\'ll learn what\'s so great about these tools and meet the rest of the ecosystem.',
       speakers: [{
         author: 'Diogo Cardoso',
-        position: 'Senior Front End Developer',
+        position: 'Front End Developer',
         company: 'Exictos',
         github: 'https://github.com/dpcardoso',
       }],
