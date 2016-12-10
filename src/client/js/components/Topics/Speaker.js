@@ -1,18 +1,36 @@
 import React, { PropTypes } from 'react'
 
 const renderSpeakers = speakers => (
-  speakers.map(({ author, position, company }) => (
-    <section key={author} className="m-topic-speaker">
-      <h2 className="a-body-2 is-highlight">{author}</h2>
-      <p className="a-body-1 is-highlight">{position}, {company}</p>
-    </section>
-  ))
-)
+  speakers.map(({ author, github, position, company }) => {
+    let authorProfile
 
-const Event = props => (
-  <article>
-    {renderSpeakers(props.speakers)}
-  </article>
-)
+    if (github) {
+      authorProfile = (<a href={github} className="a-link a-body-2 is-highlight" target="_blank">
+        {author}
+      </a>)
+    } else {
+      authorProfile = (<h2 className="a-body-2 is-highlight">
+        {author}
+      </h2>)
+    }
+
+    return (
+      <section key={author} className="m-topic-speaker">
+        {authorProfile}
+        <p className="a-body-1 is-highlight">{position}, {company}</p>
+      </section>
+    )
+  }
+))
+
+const Event = props => {
+  const styleClass = props.speakers.length > 1 ? 'm-topic-speakers' : ''
+
+  return (
+    <article className={styleClass}>
+      {renderSpeakers(props.speakers)}
+    </article>
+  )
+}
 
 export default Event
