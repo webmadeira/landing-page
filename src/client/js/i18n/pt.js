@@ -76,6 +76,17 @@ export default {
       }],
     },
     {
+      image: 'react-not-needed.svg',
+      theme: 'React not needed',
+      description: 'Componentes web, DOM virtual e estruturas de dados imutáveis',
+      speakers: [{
+        author: 'André Gonçalves',
+        position: 'Web Dev Consultant',
+        company: 'Freelancer',
+        github: 'https://github.com/dpcardoso',
+      }],
+    },
+    {
       image: 'agile.png',
       theme: 'Trabalhando num ambiente ágil',
       description: 'Vamos descobrir o que significa ter uma abordagem ágil no desenvolvimento de software e como podemos entregar o produto certo de forma rápida, fácil e sem erros. No caminho, vamos comparar o ágil com outras mentalidades de desenvolvimento de software e explorar o scrum - uma das frameworks ágeis mais populares.',

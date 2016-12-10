@@ -76,6 +76,17 @@ export default {
       }],
     },
     {
+      image: 'react-not-needed.svg',
+      theme: 'React not needed',
+      description: 'Web components, virtual DOM and immutable data structures',
+      speakers: [{
+        author: 'André Gonçalves',
+        position: 'Web Dev Consultant',
+        company: 'Freelancer',
+        github: 'https://github.com/dpcardoso',
+      }],
+    },
+    {
       image: 'agile.png',
       theme: 'Working in an agile environment',
       description: 'Let’s find out what it means to have an agile approach in software development and how can we deliver the right product quickly, easily and bug free. In the way, we’ll compare agile with other software development mindsets and explore scrum - one of the most popular agile frameworks.',
