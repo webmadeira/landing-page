@@ -77,7 +77,7 @@ export default {
     },
     {
       image: 'react-not-needed.svg',
-      theme: 'React not needed',
+      theme: 'Não preciso de React',
       description: 'Componentes web, DOM virtual e estruturas de dados imutáveis',
       speakers: [{
         author: 'André Gonçalves',
