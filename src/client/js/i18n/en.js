@@ -83,7 +83,7 @@ export default {
         author: 'André Gonçalves',
         position: 'Web Dev Consultant',
         company: 'Freelancer',
-        github: 'https://github.com/dpcardoso',
+        github: 'https://github.com/andregoncalves',
       }],
     },
     {
