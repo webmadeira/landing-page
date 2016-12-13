@@ -67,7 +67,7 @@ export default {
     {
       image: 'react.png',
       theme: 'React + Redux',
-      description: 'Let\'s take a journey into React and Redux, a declarative and component-based library for building user interfaces and a predictable state container for JavaScript apps. Along the way we\'ll learn what\'s so great about these tools and meet the rest of the ecosystem.',
+      description: 'Let\'s take a journey into React and Redux, a declarative and component-based library for building user interfaces and a predictable state container for JavaScript apps.',
       speakers: [{
         author: 'Diogo Cardoso',
         position: 'Senior Front End Developer',

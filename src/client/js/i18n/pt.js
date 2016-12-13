@@ -67,7 +67,7 @@ export default {
     {
       image: 'react.png',
       theme: 'React + Redux',
-      description: 'Vamos fazer uma viagem em React e Redux, uma biblioteca declarativa e baseada em componentes para a construção de interfaces e um repositório de estado previsível para aplicações JavaScript. Ao longo do caminho vamos aprender o melhor que estas ferramentas têm para oferecer e conhecer o resto do ecossistema.',
+      description: 'Vamos fazer uma viagem em React e Redux, uma biblioteca declarativa e baseada em componentes para a construção de interfaces e um repositório de estado previsível para aplicações JavaScript.',
       speakers: [{
         author: 'Diogo Cardoso',
         position: 'Senior Front End Developer',
