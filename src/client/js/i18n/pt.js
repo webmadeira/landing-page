@@ -19,7 +19,7 @@ export default {
       description: 'Vamos ver como é simples construir uma aplicação isomórfica usando o Angular Universal e como pode melhorar o desempenho da aplicação.',
       speakers: [{
         author: 'Miguel Quintal',
-        position: 'Senior Front End Developer',
+        position: 'Front End Developer',
         company: 'William Hill',
         github: 'https://github.com/mquintal',
       }],
@@ -49,7 +49,7 @@ export default {
       description: 'Elastic Stack (antigo ELK) é um grupo de produtos open source da Elastic Team, projetado para ajudar os utilizadores a extrair dados de qualquer origem em qualquer formato e pesquisar, analisar e visualizar de forma sofisticada os dados em tempo real. Elastic Stack começa no Filebeat e termina no Kibana. O que está a meio? Você vai descobri-lo no próximo dia 27 de dezembro.',
       speakers: [{
         author: 'Cristian Gonçalves',
-        position: 'Senior Web Developer',
+        position: 'Web Developer',
         company: 'Exictos',
       }],
     },
@@ -70,9 +70,20 @@ export default {
       description: 'Vamos fazer uma viagem em React e Redux, uma biblioteca declarativa e baseada em componentes para a construção de interfaces e um repositório de estado previsível para aplicações JavaScript.',
       speakers: [{
         author: 'Diogo Cardoso',
-        position: 'Senior Front End Developer',
+        position: 'Front End Developer',
         company: 'Exictos',
         github: 'https://github.com/dpcardoso',
+      }],
+    },
+    {
+      image: 'react-not-needed.svg',
+      theme: 'Não preciso de React',
+      description: 'Componentes web, DOM virtual e estruturas de dados imutáveis',
+      speakers: [{
+        author: 'André Gonçalves',
+        position: 'Web Dev Consultant',
+        company: 'Freelancer',
+        github: 'https://github.com/andregoncalves',
       }],
     },
     {
