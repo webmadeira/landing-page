@@ -14,7 +14,15 @@ export default function translate(key) {
     class TranslationComponent extends React.Component {
       render() {
         const strings = languages[this.context.currentLanguage][key]
-        return <Component {...this.props} {...this.state} strings={strings} />
+        const currentLanguage = this.context.currentLanguage
+        return (
+          <Component
+            {...this.props}
+            {...this.state}
+            strings={strings}
+            currentLanguage={currentLanguage}
+          />
+        )
       }
     }
 

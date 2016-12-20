@@ -8,7 +8,7 @@ const Info = (props) => {
 
   return (
     <div className="m-mb-info">
-      <Ballon text={date} class="is-long-text" />
+      <Ballon text={date} ballonStyle='is-inverted-x' class="is-long-text" />
       <Ballon text={talks} class="is-small-text" />
       <Montain />
     </div>

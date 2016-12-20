@@ -10,7 +10,7 @@ const Sponsors = props => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src="/img/sponsor-serra-de-agua.jpg" alt="logo" />
+        <img className="a-sponsor-logo" src="/img/sponsor-serra-de-agua.jpg" alt="logo" />
       </a>
     </div>
   </footer>

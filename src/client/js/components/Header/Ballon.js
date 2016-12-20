@@ -4,7 +4,7 @@ const Ballon = props => {
   const className = `a-event-detail ${props.class}`
 
   return (<div className="m-balloon-wrapper">
-    <img src="/img/balloon.svg" alt="balloon" />
+    <img className={props.ballonStyle} src="/img/balloon.svg" alt="balloon" />
     <p className={className}>{props.text}</p>
   </div>)
 }

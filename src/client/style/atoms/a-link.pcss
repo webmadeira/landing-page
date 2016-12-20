@@ -2,8 +2,16 @@ a.a-link {
   text-decoration: none;
   color: get-color(text, primary);
   transition: opacity .3s ease;
- 
-  &:hover {
-    opacity: .3;
+
+  &:not(.is-active-lang) {
+    &:hover {
+      opacity: .3;
+    }
+  }
+
+  &.is-active-lang {
+    &:hover{
+      cursor: default;
+    }
   }
 }
