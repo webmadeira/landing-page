@@ -8,7 +8,7 @@ module.exports = function pageTheme(theme) {
         dark: '#496269',
       },
       accent: {
-        base: '#b04638',
+        base: '#ef3e3c',
         light: '#d27b70',
         dark: '#933a2f',
       },
@@ -43,7 +43,7 @@ module.exports = function pageTheme(theme) {
   if (outputTheme.gender === 'light') {
     outputTheme.text = {
       primary: '#74969f',
-      secondary: '#b04638',
+      secondary: '#ef3e3c',
       disabled: '#e1eff2',
     }
   } else {
