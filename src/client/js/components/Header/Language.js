@@ -13,7 +13,7 @@ const Language = props => (
 
 Language.propTypes = {
   strings: PropTypes.objectOf(PropTypes.string),
-  currentLanguage: PropTypes.objectOf(PropTypes.currentLanguage),
+  currentLanguage: PropTypes.string,
   onLanguageChange: PropTypes.func,
 }
 
