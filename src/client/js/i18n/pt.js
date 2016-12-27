@@ -49,7 +49,7 @@ export default {
       description: 'Elastic Stack (antigo ELK) é um grupo de produtos open source da Elastic Team, projetado para ajudar os utilizadores a extrair dados de qualquer origem em qualquer formato e pesquisar, analisar e visualizar de forma sofisticada os dados em tempo real. Elastic Stack começa no Filebeat e termina no Kibana. O que está a meio? Você vai descobri-lo no próximo dia 27 de dezembro.',
       speakers: [{
         author: 'Cristian Gonçalves',
-        position: 'Web Developer',
+        position: 'Back End Developer',
         company: 'Exictos',
       }],
     },
@@ -66,8 +66,8 @@ export default {
     },
     {
       image: 'react.png',
-      theme: 'React + Redux',
-      description: 'Vamos fazer uma viagem em React e Redux, uma biblioteca declarativa e baseada em componentes para a construção de interfaces e um repositório de estado previsível para aplicações JavaScript. Ao longo do caminho vamos aprender o melhor que estas ferramentas têm para oferecer e conhecer o resto do ecossistema.',
+      theme: 'React',
+      description: 'Vamos fazer uma viagem sobre React, uma biblioteca declarativa e baseada em componentes para a construção de interfaces.',
       speakers: [{
         author: 'Diogo Cardoso',
         position: 'Front End Developer',
