@@ -10,7 +10,7 @@ export default {
   },
   Info: {
     date: '27 Dez 19h',
-    talks: '7 temas',
+    talks: '8 temas',
   },
   Topics: [  // TODO: Use the same structure for all translations and extract the fields that aren't multilanguage (eg: image)
     {
